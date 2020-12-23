@@ -1,0 +1,17 @@
+<h1>Client Details</h1>
+<div class="example-container" *ngIf="client">
+
+  <div>
+    {{client.firstName}}
+  </div>
+  <div>
+    {{client.lastName}}
+  </div>
+  <div>
+    {{client.phone}}
+  </div>
+  <div>
+    {{client.address}}
+  </div>
+    <button (click)="list()" mat-raised-button color="primary">Back to Client List</button>
+</div>

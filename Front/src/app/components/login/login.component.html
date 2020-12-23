@@ -1,0 +1,90 @@
+<!--<div>-->
+<!--  <div class="container">-->
+<!--    <div class="row">-->
+<!--      <div class="col-md-6">-->
+<!--        <div class="card">-->
+<!--          <form [formGroup]="formGroup" (ngSubmit)="submit()" class="box">-->
+<!--            <h1>Login</h1>-->
+<!--            <p class="text-muted"> Please enter your login and password!</p>-->
+<!--            <input type="text" formControlName="username" required name="password" placeholder="Username">-->
+<!--            <input type="password" required minlength="8" formControlName="password" name="password" placeholder="Password">-->
+<!--            <input type="submit" name="" value="Login">-->
+<!--          </form>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<!--<div class="main-content">-->
+<!--  <div class="container-fluid">-->
+<!--    <div class="row"></div>-->
+<!--    <div class="row">-->
+<!--      <div class="col-md-4"></div>-->
+<!--      <div class="col-md-4">-->
+<!--        <div class="card card-profile" style="margin-top: 120px !important;">-->
+<!--        </div>-->
+<!--        <div class="card-body">-->
+<!--&lt;!&ndash;          <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>&ndash;&gt;-->
+<!--          <form [formGroup]="formGroup" (ngSubmit)="submit()" class="box">-->
+<!--            <div class="row">-->
+<!--              <div class="col-md-12">-->
+<!--                <h1>Please enter your login and password!</h1>-->
+<!--                <mat-form-field>-->
+<!--                  <mat-label>Username :</mat-label>-->
+<!--                  <input type="text" formControlName="username" required name="username" placeholder="Username" matInput type="password" class="form-control">-->
+<!--                  <mat-icon matPrefix>person</mat-icon>-->
+<!--                </mat-form-field>-->
+
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--              <div class="col-md-12">-->
+
+<!--                <mat-form-field>-->
+<!--                  <mat-label>Password :</mat-label>-->
+<!--                  <input type="text" formControlName="username" required name="password" placeholder="Password" matInput type="password" class="form-control" >-->
+<!--                  <mat-icon matPrefix>lock</mat-icon>-->
+<!--                </mat-form-field>-->
+
+<!--              </div>-->
+<!--            </div>-->
+<!--            <br>-->
+<!--            <div class="row">-->
+<!--              <div class="col-md-12">-->
+<!--                <button mat-raised-button  type="submit" name="" value="Login" style="width: 100%">Login</button>-->
+<!--                <div class="clearfix"></div>-->
+<!--              </div>-->
+
+<!--            </div>-->
+<!--          </form>-->
+
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-md-4"></div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<mat-toolbar>
+  <span>LOGIN</span>
+</mat-toolbar>
+<mat-card class="my-card">
+  <mat-card-content>
+    <form class="my-form" [formGroup]="formGroup" (ngSubmit)="submit()" class="box">
+      <mat-form-field class="full-width">
+        <mat-label>Username</mat-label>
+        <input  matInput  placeholder="Username" formControlName="username" type="text">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Password</mat-label>
+        <input  matInput   formControlName="password"  placeholder="Password" type="password">
+      </mat-form-field>
+  <mat-card-actions>
+    <button type="submit" mat-raised-button color="primary">LOGIN</button>
+  </mat-card-actions>
+    </form>
+  </mat-card-content>
+</mat-card>

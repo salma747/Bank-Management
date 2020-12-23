@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+
+    <h1><mat-icon>account_balance</mat-icon>Bank Accounts Management </h1>
+    <span class="menu-spacer"></span>
+    <div *ngIf="isLoggedIn">
+      <a  mat-button [routerLink]="'./client-list'"><mat-icon>view_headline</mat-icon> Clients List </a>
+      <a *ngIf="isAdmin" mat-button [routerLink]="'./add-client'"><mat-icon>person</mat-icon> Add Client </a>
+      <a  *ngIf="isAdmin" mat-button [routerLink]="'./compte-list'"><mat-icon>view_headline</mat-icon> Accounts List </a>
+      <a *ngIf="isAdmin" mat-button [routerLink]="'./add-compte'"><mat-icon>person</mat-icon> Add Account </a>
+      <button (click)="logout()" mat-button color="warn"><mat-icon>logout</mat-icon>Logout</button>
+    </div>
+  </mat-toolbar-row>
+
+</mat-toolbar>

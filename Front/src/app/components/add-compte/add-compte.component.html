@@ -1,0 +1,32 @@
+<h1>Create Account</h1>
+<div class="example-container" *ngIf="loaded">
+
+  <form (ngSubmit)="submit()" [formGroup]="formGroup" >
+    <mat-form-field appearance="fill">
+      <mat-label> Amount </mat-label>
+      <input formControlName="solde" required matInput>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="standard">
+      <mat-label>Client</mat-label>
+      <input  formControlName="client"  type="text" placeholder="Client" matInput  [matAutocomplete]="auto">
+      <mat-autocomplete [displayWith]="displayFn"  #auto="matAutocomplete">
+        <mat-option *ngFor="let client of filteredClients | async" [value]="client">
+          {{client.firstName}} {{client.lastName}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+
+<!--    <mat-form-field appearance="fill">-->
+<!--      <mat-label>Client</mat-label>-->
+<!--      <mat-select formControlName="client">-->
+<!--        <mat-option *ngFor="let client of clients" [value]="client">-->
+<!--          {{client.firstName}} {{client.lastName}}-->
+<!--        </mat-option>-->
+<!--      </mat-select>-->
+<!--    </mat-form-field>-->
+  <br>
+    <button mat-raised-button color="primary">Save</button>
+  </form>
+</div>

@@ -1,0 +1,28 @@
+<h1>Update Client</h1>
+<div *ngIf="loaded" class="example-container">
+
+  <form (ngSubmit)="submit()" [formGroup]="formGroup" >
+    <mat-form-field appearance="fill">
+      <mat-label>First Name </mat-label>
+      <input formControlName="firstName" required matInput>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Last Name </mat-label>
+      <input formControlName="lastName" required matInput>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>phone  </mat-label>
+      <input minlength="8" maxlength="8" formControlName="phone" required matInput  type="text">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Address </mat-label>
+      <textarea formControlName="address" required matInput></textarea>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary">Save</button>
+  </form>
+</div>
+
